@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:5000/api/auth";
+const API_URL = "https://your-backend-url.vercel.app/api/auth";
+
 
 async function register() {
   const email = document.getElementById("regEmail").value;
