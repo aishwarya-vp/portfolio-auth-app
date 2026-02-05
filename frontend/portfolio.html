@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>My Portfolio</h1>
+
+  <p id="userEmail"></p>
+
+  <section>
+    <h2>👤 ABOUT ME</h2>
+    <p>I am a Computer Science undergraduate at M S Ramaiah University of Applied Sciences, with a strong interest in full-stack development, artificial intelligence, and machine learning. I enjoy building practical, real-world applications that combine clean backend logic with meaningful user experiences.
+
+I have hands-on experience developing AI-driven systems, machine learning models, and web applications, and I am particularly interested in using technology to solve socially impactful problems such as healthcare analytics and accessible legal assistance. I am continuously improving my problem-solving skills through coding platforms and real-world projects.</p>
+  </section>
+
+  <section>
+  <h2>🛠️Skills</h2>
+
+  <h3>Programming Languages</h3>
+  <ul>
+    <li>Python</li>
+    <li>Java</li>
+  </ul>
+
+  <h3>Web Development</h3>
+  <ul>
+    <li>HTML, CSS, JavaScript</li>
+    <li>ReactJS</li>
+    <li>Flask</li>
+  </ul>
+
+  <h3>Databases</h3>
+  <ul>
+    <li>MySQL</li>
+    <li>MongoDB</li>
+  </ul>
+
+  <h3>Machine Learning & AI</h3>
+  <ul>
+    <li>Scikit-learn, TensorFlow</li>
+    <li>Regression, Decision Trees, Random Forest</li>
+    <li>NLP, LLMs, LangChain</li>
+  </ul>
+
+  <h3>Core CS Fundamentals</h3>
+  <ul>
+    <li>Data Structures & Algorithms</li>
+    <li>DBMS</li>
+    <li>Operating Systems</li>
+    <li>Computer Networks</li>
+  </ul>
+
+  <h3>Tools</h3>
+  <ul>
+    <li>VS Code</li>
+    <li>Jupyter Notebook</li>
+  </ul>
+</section>
+
+  <section>
+  <h2>📂Projects</h2>
+
+  <h3>AI-Powered Legal Advisor</h3>
+  <p>
+    A full-stack AI legal assistant designed to provide accessible legal guidance.
+  </p>
+  <ul>
+    <li>
+      Implemented a Retrieval-Augmented Generation (RAG) pipeline using
+      InLegalBERT embeddings, FAISS vector search, and LangChain to retrieve
+      relevant IPC sections.
+    </li>
+    <li>
+      Built a deep-learning judgment prediction system using a Bi-GRU model
+      (TensorFlow/Keras) for FIR and judgment outcome analysis.
+    </li>
+    <li>
+      Integrated Google Gemini API for automated legal document generation,
+      including petitions and bail applications.
+    </li>
+    <li>
+      Developed a scalable Flask backend with Redis, multilingual support,
+      secure file uploads, and real-time chatbot interaction.
+    </li>
+  </ul>
+
+  <h3>Diabetes Prediction using Machine Learning</h3>
+  <p>
+    A machine learning project focused on healthcare outcome prediction.
+  </p>
+  <ul>
+    <li>
+      Built and evaluated a predictive model using the Pima Indians Diabetes
+      Dataset.
+    </li>
+    <li>
+      Performed data preprocessing, feature engineering, and feature selection
+      to improve model performance.
+    </li>
+    <li>
+      Trained an SVM model achieving 72.7% accuracy and 0.77 ROC-AUC.
+    </li>
+    <li>
+      Conducted exploratory data analysis and data visualization using
+      Matplotlib and Seaborn.
+    </li>
+  </ul>
+</section>
+
+
+  <button onclick="logout()">Logout</button>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (!user) window.location.href = "index.html";
+
+    document.getElementById("userEmail").innerText =
+      "Logged in as: " + user.email;
+
+    function logout() {
+      localStorage.removeItem("user");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
