@@ -1,4 +1,4 @@
-const API_URL = "https://your-backend-url.vercel.app/api/auth";
+const API_URL = "https://portfolio-auth-app.vercel.app/";
 
 
 async function register() {
